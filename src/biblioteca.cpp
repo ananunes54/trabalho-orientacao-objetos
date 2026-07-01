@@ -22,4 +22,5 @@ Biblioteca::~Biblioteca()
     {
         delete item;
     }
+    m_acervo.clear();
 }

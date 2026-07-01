@@ -26,6 +26,7 @@ int main()
         biblioteca.addItem(item);
         std::cout << "Item adicionado ao acervo." << std::endl;
     }
+    acervo.clear();
     std::cout << std::endl;
 
     
@@ -52,7 +53,7 @@ int main()
     std::cout << "=== REALIZANDO EMPRÉSTIMO ===" << std::endl;
     for (auto emprestimo : emprestimos)
     {
-        std::cout << "Empréstmo realizado com sucesso!" << std::endl;
+        std::cout << "Empréstimo realizado com sucesso!" << std::endl;
     }
     std::cout << std::endl;
 
@@ -61,6 +62,19 @@ int main()
         usuario->listarEmprestimos();
     }
 
+
     std::cout << "=== FIM DO PROGAMA ===" << std::endl;
     std::cout << "A biblioteca será destruída e todos os itens liberados." << std::endl;
+    std::cout << "Destruindo a biblioteca e todos os itens..." << std::endl;
+    for (auto usuario : usuarios)
+    {
+        delete usuario;
+    }
+    usuarios.clear();
+
+    for (auto emprestimo : emprestimos)
+    {
+        delete emprestimo;
+    }
+    emprestimos.clear();
 }
