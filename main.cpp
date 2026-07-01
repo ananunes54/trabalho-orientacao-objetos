@@ -1,6 +1,8 @@
 #include <iostream>
 
 #include <biblioteca.h>
+#include <usuario.h>
+#include <emprestimo.h>
 #include <livro.h>
 #include <revista.h>
 #include <dvd.h>
@@ -23,7 +25,23 @@ int main()
     biblioteca.addItem(d1);
     std::cout << std::endl;
 
+    
     std::cout << "=== ACERVO DA BIBLIOTECA ===" << std::endl;
     biblioteca.listarAcervo();
     std::cout << std::endl;
+
+    
+    Usuario* u1 = new Usuario("João Silva", 1001);
+
+    std::cout << "=== CADASTRO DE USUÁRIO ===" << std::endl;
+    std::cout << "Usuário: " << u1->getNome() << "(ID: " << u1->getId() << ") cadastrado" << std::endl;
+    std::cout << std::endl;
+
+    Emprestimo* e1 = new Emprestimo("10/06/2026", "20/06/2026", l1, u1);
+    u1->addEmprestimo(e1);
+    std::cout << "=== REALIZANDO EMPRÉSTIMO ===" << std::endl;
+    std::cout << "Empréstmo realizado com sucesso!" << std::endl;
+    std::cout << std::endl;
+
+    u1->listarEmprestimos();
 }

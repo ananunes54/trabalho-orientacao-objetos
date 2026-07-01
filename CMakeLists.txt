@@ -6,6 +6,8 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/$<CONFIGURATION>")
 
 set(SRC
     src/biblioteca.cpp
+    src/usuario.cpp
+    src/emprestimo.cpp
     src/item.cpp
     src/livro.cpp
     src/revista.cpp
