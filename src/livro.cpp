@@ -14,8 +14,8 @@ int Livro::getPaginas()
 
 void Livro::exibirInfo()
 {
-    std::cout << "Livro:" << m_titulo << "|";
-    std::cout << "Autor:" << m_autor << "|";
-    std::cout << "Ano:" << m_ano << "|";
-    std::cout << "Páginas:" << m_numPaginas << std::endl;
+    std::cout << "Livro: " << m_titulo << " | ";
+    std::cout << "Autor: " << m_autor << " | ";
+    std::cout << "Ano: " << m_ano << " | ";
+    std::cout << "Páginas: " << m_numPaginas << std::endl;
 }

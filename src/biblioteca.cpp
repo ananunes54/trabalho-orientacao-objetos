@@ -5,7 +5,6 @@
 void Biblioteca::addItem(Item* item)
 {
     m_acervo.push_back(item);
-    std::cout << "Item adicionado ao acervo." << std::endl;
 }
 
 void Biblioteca::listarAcervo()
@@ -14,7 +13,6 @@ void Biblioteca::listarAcervo()
     {
         item->exibirInfo();
     }
-
     std::cout << "Total de itens:" << m_acervo.size() << std::endl;
 }
 
