@@ -26,7 +26,6 @@ int main()
         biblioteca.addItem(item);
         std::cout << "Item adicionado ao acervo." << std::endl;
     }
-    acervo.clear();
     std::cout << std::endl;
 
     
@@ -48,7 +47,6 @@ int main()
 
     std::vector<Emprestimo*> emprestimos;
     emprestimos.push_back(new Emprestimo("10/06/2026", "20/06/2026", acervo[0], usuarios[0]));
-    usuarios[0]->addEmprestimo(emprestimos.back());
 
     std::cout << "=== REALIZANDO EMPRÉSTIMO ===" << std::endl;
     for (auto emprestimo : emprestimos)

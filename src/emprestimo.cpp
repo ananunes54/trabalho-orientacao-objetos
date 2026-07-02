@@ -1,6 +1,12 @@
 #include <iostream>
 #include <emprestimo.h>
+#include <usuario.h>
 #include <item.h>
+
+Emprestimo::Emprestimo(std::string dataEmprestimo, std::string dataDevolucao, Item* item, Usuario* usuario) : m_dataEmprestimo(dataEmprestimo), m_dataDevolucao(dataDevolucao), m_item(item), m_usuario(usuario)
+{
+    usuario->addEmprestimo(this);
+}
 
 double Emprestimo::calcularMulta()
 {
